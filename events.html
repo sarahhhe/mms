@@ -20,33 +20,40 @@
         <style>
           
             
-          // Variables
+          <style>
+    /* Mobile */
+    @media screen and (max-width: 768px) {
+        /* Your styles for mobile devices */
+        .some-selector {
+            width: 100%;
+        }
+    }
 
-$tablet: 769px;
-$desktop: 1004px;
-$fullHd: 1280px;
+    /* Tablet */
+    @media screen and (min-width: 769px) and (max-width: 1003px) {
+        /* Your styles for tablets */
+        .some-selector {
+            width: 80%;
+        }
+    }
 
-// Mixins
-@mixin mobile {
-  @media screen and (max-width: $tablet - 1px) {
-    @content;
-  }
-}
-@mixin tablet {
-  @media screen and (min-width: $tablet) {
-    @content;
-  }
-}
-@mixin desktop {
-  @media screen and (min-width: $desktop) {
-    @content;
-  }
-}
-@mixin fullhd {
-  @media screen and (min-width: $fullHd) {
-    @content;
-  }
-}
+    /* Desktop */
+    @media screen and (min-width: 1004px) and (max-width: 1279px) {
+        /* Your styles for desktops */
+        .some-selector {
+            width: 60%;
+        }
+    }
+
+    /* Full HD */
+    @media screen and (min-width: 1280px) {
+        /* Your styles for full HD screens */
+        .some-selector {
+            width: 40%;
+        }
+    }
+</style>
+
 
 
             .slideshow {
