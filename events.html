@@ -20,6 +20,34 @@
         <style>
           
             
+          // Variables
+
+$tablet: 769px;
+$desktop: 1004px;
+$fullHd: 1280px;
+
+// Mixins
+@mixin mobile {
+  @media screen and (max-width: $tablet - 1px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media screen and (min-width: $tablet) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media screen and (min-width: $desktop) {
+    @content;
+  }
+}
+@mixin fullhd {
+  @media screen and (min-width: $fullHd) {
+    @content;
+  }
+}
+
 
             .slideshow {
             position: relative;
