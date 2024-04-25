@@ -1,160 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>محجوب محمد صالح</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Custom Google font-->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
-        <!-- Bootstrap icons-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-    </head>
-    <body class="d-flex flex-column h-100 bg-light">
-        <main class="flex-shrink-0">
-            <!-- Navigation-->
-            <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
-                <div class="container px-5">
-                    <a class="navbar-brand ms-auto order-lg-2" href="index.html"><span class="fw-bolder text">محجوب محمد صالح</span></a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
-                            <li class="nav-item"><a class="nav-link" href="events.html">فعاليات</a></li>
-                            <li class="nav-item"><a class="nav-link" href="interviews.html">مقابلات</a></li>
-                            <li class="nav-item"><a class="nav-link" href="publications.html">مقالات</a></li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMedia" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    ميديا
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMedia" style="left: auto; right: 0;">
-                                    <li><a class="dropdown-item" href="photos.html">صور</a></li>
-                                    <li><a class="dropdown-item" href="videos.html">فيديو</a></li>
-                                </ul>                    
-                            </li>
-                            <li class="nav-item"><a class="nav-link" href="contact-us.html">اتصل بنا</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محجوب محمد صالح</title>
+   
+    <!-- Custom styles -->
+    <style>
+        $color-white: #ffffff;
+$color-black: #252a32;
+$color-light: #f1f5f8;
+$color-red: #d32f2f;
+$color-blue: #148cb8;
 
-    <!-- Header -->
-    <header class="bg-light py-5">
-        <div class="container text-center">
-            <h1>صور</h1>
-        </div>
-    </header>
+$box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.24);
 
-    <!-- Photo Gallery -->
-    <section class="gallery py-5">
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	list-style: none;
+	list-style-type: none;
+	text-decoration: none;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+  color: $color-black;
+  background: $color-white;
+}
+
+.container {
+  max-width: 80rem;
+  width: 100%;
+  padding: 4rem 2rem;
+  margin: 0 auto;
+}
+
+.main {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card {
+    color: $color-black;
+    border-radius: 2px;
+    background: $color-white;
+    box-shadow: $box-shadow;
+
+    &-image {
+      position: relative;
+      display: block;
+      width: 100%;
+      padding-top: 70%;
+      background: $color-white;
+
+      img {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .main {
+    .container {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 1rem;
+    }
+  }
+}
+
+    </style>
+</head>
+<body class="d-flex flex-column h-100 bg-light">
+    <main class="main">
         <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="assets/MMS in Britain 1952.jpg" class="card-img-top" alt="صورة عرضية">
-                        <div class="card-body">
-                            <p class="card-text"> محجوب محمد صالح في بريطانيا ١٩٥٢</p>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card">
-                            <img src="assets/In Foreign Office London 1952.jpg" class="card-img-top" alt="صورة عرضية">
-                            <div class="card-body">
-                                <p class="card-text">مكتب الخارجية في لندن ١٩٥٢</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                    <div class="card">
-                        <img src="assets/Britain-1953.jpg" class="card-img-top" alt="صورة عرضية">
-                        <div class="card-body">
-                            <p class="card-text">بريطانيا ١٩٥٣</p>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="assets/Mahgoub M Salih and Nassir .jpg" class="card-img-top" alt="صورة عرضية">
-                        <div class="card-body">
-                            <p class="card-text">محجوب محمد صالح وناصر</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="assets/Mahgoub M Salih and Qaddafi.jpg" class="card-img-top" alt="صورة عرضية">
-                        <div class="card-body">
-                            <p class="card-text">محجوب محمد صالح والقذافي</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="assets/Mahgoub M Salih and Mubarrak.jpg" class="card-img-top" alt="صورة عرضية">
-                        <div class="card-body">
-                            <p class="card-text">محجوب محمد صالح ومبارك</p>
-                        </div>
-                    </div>
-                </div>
+          <div class="card">
+            <div class="card-image">
+              <a href="https://source.unsplash.com/1280x720/?nature" data-fancybox="gallery" data-caption="Caption Images 1">
+                <img src="https://source.unsplash.com/1280x720/?nature" alt="Image Gallery">
+              </a>
             </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="assets/MMS Golden Pen of Freedom Award 2005.jpg" class="card-img-top" alt="صورة عرضية">
-                        <div class="card-body">
-                            <p class="card-text"> جائزة القلم الذهبي للحرية ٢٠٠٥</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="assets/Mahgoub M Salih Speech Knight Awards Washington DC 2005.JPG" class="card-img-top" alt="صورة عرضية">
-                        <div class="card-body">
-                            <p class="card-text">جوائز الفارس واشنطن العاصمة ٢٠٠٥</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="assets/MMS addresses an event in Khartoum.jpg" class="card-img-top" alt="صورة عرضية">
-                        <div class="card-body">
-                            <p class="card-text">محجوب محمد صالح في الخرطوم</p>
-                        </div>
-                    </div>
-                </div>
+          </div>
+          <div class="card">
+            <div class="card-image">
+              <a href="https://source.unsplash.com/1280x720/?food" data-fancybox="gallery" data-caption="Caption Images 1">
+                <img src="https://source.unsplash.com/1280x720/?food" alt="Image Gallery">
+              </a>
             </div>
+          </div>
+          <div class="card">
+            <div class="card-image">
+              <a href="https://source.unsplash.com/1280x720/?travel" data-fancybox="gallery" data-caption="Caption Images 1">
+                <img src="https://source.unsplash.com/1280x720/?travel" alt="Image Gallery">
+              </a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image">
+              <a href="https://source.unsplash.com/1280x720/?building" data-fancybox="gallery" data-caption="Caption Images 1">
+                <img src="https://source.unsplash.com/1280x720/?building" alt="Image Gallery">
+              </a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image">
+              <a href="https://source.unsplash.com/1280x720/?flower" data-fancybox="gallery" data-caption="Caption Images 1">
+                <img src="https://source.unsplash.com/1280x720/?flower" alt="Image Gallery">
+              </a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image">
+              <a href="https://source.unsplash.com/1280x720/?animal" data-fancybox="gallery" data-caption="Caption Images 1">
+                <img src="https://source.unsplash.com/1280x720/?animal" alt="Image Gallery">
+              </a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image">
+              <a href="https://source.unsplash.com/1280x720/?sport" data-fancybox="gallery" data-caption="Caption Images 1">
+                <img src="https://source.unsplash.com/1280x720/?sport" alt="Image Gallery">
+              </a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image">
+              <a href="https://source.unsplash.com/1280x720/?human" data-fancybox="gallery" data-caption="Caption Images 1">
+                <img src="https://source.unsplash.com/1280x720/?human" alt="Image Gallery">
+              </a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image">
+              <a href="https://source.unsplash.com/1280x720/?mountain" data-fancybox="gallery" data-caption="Caption Images 1">
+                <img src="https://source.unsplash.com/1280x720/?mountain" alt="Image Gallery">
+              </a>
+            </div>
+          </div>
         </div>
-    </section>
-    
+      </main>
+      <script>
+        // Fancybox Configuration
+        $('[data-fancybox="gallery"]').fancybox({
+        buttons: [
+            "slideShow",
+            "thumbs",
+            "zoom",
+            "fullScreen",
+            "share",
+            "close"
+        ],
+        loop: false,
+        protect: true
+        });
 
-    <!-- Bootstrap Bundle with Popper.js and Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+      </script>
 </body>
-<!-- Footer-->
-<footer class="bg-white py-4 mt-auto">
-    <div class="container px-5">
-        <div class="row align-items-center justify-content-between flex-column flex-sm-row">
-            <div class="col-auto">
-                <div class="small m-0">Copyright &copy; Mahgoub Mohamed Salih 2024</div>
-            </div>
-            <div class="col-auto">
-                <a style="color: var(--bs-dark-red); margin-right: 10px;" href="https://www.facebook.com/MahgMSMemorial"><i class="bi bi-facebook"></i></a>
-                <a style="color: var(--bs-dark-red); margin-right: 10px;" href="https://twitter.com/mahgmsmemorial"><i class="bi bi-twitter"></i></a>
-            </div>
-        </div>
-    </div>
-</footer>
 </html>
