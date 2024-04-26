@@ -31,6 +31,81 @@
         <meta property="og:image" content="https://i.ibb.co/MG7qCX3/MMS-Portait.jpg">
 
     
+        <style>
+            .card-img-top {
+            height: 290px; /* Adjust the height as needed */
+            object-fit: cover; /* Maintain aspect ratio and cover container */
+            }
+
+            .blog-home2 h1,
+            .blog-home2 h2,
+            .blog-home2 h3,
+            .blog-home2 h4,
+            .blog-home2 h5,
+            .blog-home2 h6 {
+            color: #3e4555;
+            }
+
+            .blog-home2 .font-weight-medium {
+            font-weight: 500;
+            }
+
+            .blog-home2 .bg-light {
+            background-color: #f4f8fa !important;
+            }
+
+            .blog-home2 .subtitle {
+            color: #8d97ad;
+            line-height: 24px;
+            }
+
+            .blog-home2 .text-themecolor {
+            color: #316ce8;
+            }
+
+            .blog-home2 h5 {
+            line-height: 22px;
+            font-size: 18px;
+            }
+
+            .blog-home2 a.link {
+            color: #3e4555;
+            }
+
+            .blog-home2 a.link:hover {
+            color: #316ce8;
+            }
+
+            .blog-home2 .on-hover {
+            -webkit-transition: 0.2s ease-in;
+            -o-transition: 0.2s ease-in;
+            transition: 0.2s ease-in;
+            }
+
+            .blog-home2 .on-hover:hover {
+            -webkit-transform: translateY(-10px);
+            -ms-transform: translateY(-10px);
+            transform: translateY(-10px);
+            }
+
+            .blog-home2 .date-pos {
+            right: 10px;
+            top: 10px;
+            }
+
+            .blog-home2 .date-pos span {
+            font-size: 30px;
+            line-height: 30px;
+            }
+            .blog-home2 .bg-info-gradiant {
+                background: #188ef4;
+                background: -webkit-linear-gradient(legacy-direction(to right), #188ef4 0%, #316ce8 100%);
+                background: -webkit-gradient(linear, left top, right top, from(#188ef4), to(#316ce8));
+                background: -webkit-linear-gradient(left, #188ef4 0%, #316ce8 100%);
+                background: -o-linear-gradient(left, #188ef4 0%, #316ce8 100%);
+                background: linear-gradient(to right, #188ef4 0%, #316ce8 100%);
+            }
+        </style>
         </head>
     <body class="d-flex flex-column h-100">
         <main class="flex-shrink-0">
@@ -287,6 +362,67 @@
     </div>
 </section>
 
+
+<div class="blog-home2 py-5">
+    <div class="container">
+      <!-- Row  -->
+      <div class="row justify-content-center">
+        <!-- Column -->
+        <div class="col-md-8 text-center">
+            <h3 class="display-5 fw-bolder mb-0"><span style="color: var(--bs-dark-red); class="d-inline"> فعاليات القادمة</span></h3>
+        </div>
+        <!-- Column -->
+      </div>
+      <div class="row mt-4">
+        <!-- Column -->
+        <div class="col-md-4 on-hover">
+            <div class="card border-0 mb-4">
+                <a href="#"><img class="card-img-top" src="assets/events/20-apr.jpeg" alt="wrappixel kit"></a>
+                <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">أبريل<span class="d-block">٢٠ </span></div>
+                <div class="event-location bg-dark-red p-2 d-inline-block text-center rounded text-white position-absolute">باريس</div> <!-- Added class event-location -->
+            </div>
+        </div>
+        
+        
+        <!-- Column -->
+        <div class="col-md-4 on-hover">
+          <div class="card border-0 mb-4">
+            <a href="#"><img class="card-img-top" src="assets/events/21-apr.jpeg" alt="wrappixel kit"></a>
+            <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">أبريل<span class="d-block">٢١ </span></div>
+          </div>
+        </div>
+        <!-- Column -->
+        <div class="col-md-4 on-hover">
+          <div class="card border-0 mb-4">
+            <a href="#"><img class="card-img-top" src="assets/events/25-apr.jpeg" alt="wrappixel kit"></a>
+            <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">أبريل<span class="d-block">٢٥</span></div>
+          </div>
+        </div>
+        
+      </div>
+
+    <!-- Second Row -->
+      <div class="row mt-4">
+        <!-- Column -->
+        <div class="col-md-4 on-hover">
+            <div class="card border-0 mb-4">
+              <a href="#"><img class="card-img-top" src="assets/events/27-apr.jpeg" alt="wrappixel kit"></a>
+              <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">أبريل<span class="d-block">٢٧</span></div>
+            </div>
+          </div>
+        
+        <!-- Column -->
+        <div class="col-md-4 on-hover">
+            <div class="card border-0 mb-4">
+              <a href="#"><img class="card-img-top" src="assets/events/30-apr.jpeg" alt="wrappixel kit"></a>
+              <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">أبريل<span class="d-block">٣٠</span></div>
+            </div>
+          </div>
+       
+      </div>
+    </div>
+  </div>
+
             
 
         </main>
@@ -317,5 +453,78 @@
         <script src="path/to/bootstrap.min.js"></script>
         <!-- Include Bootstrap Hover Dropdown JavaScript -->
         <script src="path/to/bootstrap-hover-dropdown.js"></script>
+
+        <script>
+            // Master DOManipulator v2 ------------------------------------------------------------
+            const items = document.querySelectorAll('.item'),
+            bullets = document.querySelectorAll('.bullet'),
+            headerItems = document.querySelectorAll('.item-header'),
+            descriptionItems = document.querySelectorAll('.item-description'),
+            activeDelay = .76,
+            interval = 5000;
+
+            let current = 0;
+
+            const slider = {
+            init: () => {
+                bullets.forEach(bullet => bullet.addEventListener('click', (e) => { slider.clickedControl(e) }));
+                bullets[current].classList.add('active');
+                items[current].classList.add('active');
+            },
+            nextSlide: () => { // Increment current slide and add active class
+                slider.reset();
+                if (current === items.length - 1) current = -1; // Check if current slide is last in array
+                current++;
+                bullets[current].classList.add('active');
+                items[current].classList.add('active');
+                slider.transitionDelay(headerItems);
+                slider.transitionDelay(descriptionItems);
+            },
+            clickedControl: (e) => { // Add active class to clicked bullet and corresponding slide
+                slider.reset();
+                clearInterval(intervalF);
+
+                const bullet = e.target,
+                dataIndex = Number(bullet.dataset.index);
+
+                bullet.classList.add('active');
+                items.forEach((item, index) => {
+                if (index === dataIndex) { // Add active class to corresponding slide
+                    item.classList.add('active');
+                }
+                })
+                current = dataIndex; // Update current slide
+                slider.transitionDelay(headerItems);
+                slider.transitionDelay(descriptionItems);
+                intervalF = setInterval(slider.nextSlide, interval); // Fire that bad boi back up
+            },
+            reset: () => { // Remove active classes
+                items.forEach(item => item.classList.remove('active'));
+                bullets.forEach(bullet => bullet.classList.remove('active'));
+            },
+            transitionDelay: (items) => { // Set incrementing css transition-delay for .item-header & .item-description, .vertical-part, b elements
+                let seconds;
+
+                items.forEach(item => {
+                const children = item.childNodes; // .vertical-part(s)
+                let count = 1,
+                    delay;
+
+                item.classList.value === 'item-header' ? seconds = .015 : seconds = .007;
+
+                children.forEach(child => { // iterate through .vertical-part(s) and style b element
+                    if (child.classList) {
+                    item.parentNode.classList.contains('active') ? delay = count * seconds + activeDelay : delay = count * seconds;
+                    child.firstElementChild.style.transitionDelay = `${delay}s`; // b element
+                    count++;
+                    }
+                })
+                })
+            },
+            }
+
+            let intervalF = setInterval(slider.nextSlide, interval);
+            slider.init();
+        </script>
     </body>
 </html>
