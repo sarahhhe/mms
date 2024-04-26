@@ -18,296 +18,83 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
         <style>
-          
-            
-          <style>
-    /* Mobile */
-    @media screen and (max-width: 768px) {
-        /* Your styles for mobile devices */
-        .some-selector {
-            width: 100%;
-        }
-    }
-
-    /* Tablet */
-    @media screen and (min-width: 769px) and (max-width: 1003px) {
-        /* Your styles for tablets */
-        .some-selector {
-            width: 80%;
-        }
-    }
-
-    /* Desktop */
-    @media screen and (min-width: 1004px) and (max-width: 1279px) {
-        /* Your styles for desktops */
-        .some-selector {
-            width: 60%;
-        }
-    }
-
-    /* Full HD */
-    @media screen and (min-width: 1280px) {
-        /* Your styles for full HD screens */
-        .some-selector {
-            width: 40%;
-        }
-    }
-</style>
-
-
-
-            .slideshow {
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            margin: 0 auto;
-            display: grid;
-            justify-items: stretch;
-            grid-template-columns: 120px 1fr 120px;
-            grid-auto-rows: 120px 1fr 120px;
-
-            grid-gap: 1em;
-            grid-template-areas: ". . ." ". s ." ". b .";
-
-            @include mobile {
-                grid-template-columns: 20px 1fr 20px;
-                min-height: 100vh;
-            }
+           
+          .card-img-top {
+            height: 300px; /* Adjust the height as needed */
+            object-fit: cover; /* Maintain aspect ratio and cover container */
             }
 
-            .slideshow-items {
-            position: relative;
-            display: grid;
-            justify-items: stretch;
-            grid-template-columns: 1fr;
-            grid-auto-rows: 1fr;
-            grid-gap: 1em;
-            grid-area: s;
-
-            grid-template-areas: "i";
-            }
-            .item-content {
-            grid-area: c;
-            display: grid;
-            align-content: start;
+            .blog-home2 h1,
+            .blog-home2 h2,
+            .blog-home2 h3,
+            .blog-home2 h4,
+            .blog-home2 h5,
+            .blog-home2 h6 {
+            color: #3e4555;
             }
 
-            .item {
-            position: relative;
-            grid-area: i;
-            display: grid;
-            justify-items: stretch;
-            grid-template-columns: 1fr 120px 1.5fr;
-            grid-auto-rows: 60px 1fr 60px;
-            grid-gap: 1em;
-            grid-template-areas: ". . f" "c . f" ". . f";
-            max-height: calc(100vh - 240px - 2rem);
-
-            @include mobile {
-                grid-template-areas: ". . f" "c c f" ". . f";
-            }
+            .blog-home2 .font-weight-medium {
+            font-weight: 500;
             }
 
-            .item-image-container {
-            grid-area: f;
+            .blog-home2 .bg-light {
+            background-color: #f4f8fa !important;
             }
 
-            figure {
-            height: 100%;
-            width: 100%;
+            .blog-home2 .subtitle {
+            color: #8d97ad;
+            line-height: 24px;
             }
 
-            .item-image {
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-            opacity: 0;
-            display: block;
-            transition: opacity 0.3s ease-out 0.45s;
+            .blog-home2 .text-themecolor {
+            color: #316ce8;
             }
 
-            .item.active .item-image {
-            opacity: 1;
+            .blog-home2 h5 {
+            line-height: 22px;
+            font-size: 18px;
             }
 
-            .item.active .item-image-container::before {
-            opacity: 0.8;
+            .blog-home2 a.link {
+            color: #3e4555;
             }
 
-            .item-header {
-            margin-bottom: 2rem;
-            width: max-content;
-
-            .vertical-part {
-                margin: 0 -4px;
-                -webkit-font-smoothing: auto;
-                font-size: 5vw;
-                color: #2a2a2a;
-                line-height: 1.3;
-
-                @include mobile {
-                font-size: 1.6rem;
-                letter-spacing: 1px;
-                }
-            }
+            .blog-home2 a.link:hover {
+            color: #316ce8;
             }
 
-            .vertical-part {
-            overflow: hidden;
-            display: inline-block;
+            .blog-home2 .on-hover {
+            -webkit-transition: 0.2s ease-in;
+            -o-transition: 0.2s ease-in;
+            transition: 0.2s ease-in;
             }
 
-            .vertical-part b {
-            display: inline-block;
-            transform: translateY(100%);
+            .blog-home2 .on-hover:hover {
+            -webkit-transform: translateY(-10px);
+            -ms-transform: translateY(-10px);
+            transform: translateY(-10px);
             }
 
-            .item-header .vertical-part b {
-            transition: 0.5s;
+            .blog-home2 .date-pos {
+            right: 10px;
+            top: 10px;
             }
 
-            .item-description .vertical-part b {
-            transition: 0.21s;
+            .blog-home2 .date-pos span {
+            font-size: 30px;
+            line-height: 30px;
+            }
+            .blog-home2 .bg-info-gradiant {
+                background: #188ef4;
+                background: -webkit-linear-gradient(legacy-direction(to right), #188ef4 0%, #316ce8 100%);
+                background: -webkit-gradient(linear, left top, right top, from(#188ef4), to(#316ce8));
+                background: -webkit-linear-gradient(left, #188ef4 0%, #316ce8 100%);
+                background: -o-linear-gradient(left, #188ef4 0%, #316ce8 100%);
+                background: linear-gradient(to right, #188ef4 0%, #316ce8 100%);
             }
 
-            .item.active .item-header .vertical-part b {
-            transform: translateY(0);
-            }
-
-            .item.active .item-description .vertical-part b {
-            transform: translateY(0);
-            }
-
-            /* Controls ----------------------------------------------------------------------*/
-            .bullets {
-            position: relative;
-            text-align: left;
-            z-index: 1000;
-            grid-area: b;
-            }
-
-            .bullet {
-            display: inline-block;
-            width: 10px;
-            height: 10px;
-
-            margin: 3px;
-            cursor: pointer;
-            width: 44px;
-            height: 44px;
-            cursor: pointer;
-            position: relative;
-            border-radius: 50%;
-            border-width: 1px;
-            border-style: solid;
-            border-color: rgba(255, 255, 255, 0);
-            border-image: initial;
-            vertical-align: middle;
-
-            svg {
-                top: 0px;
-                left: 0px;
-                width: 100%;
-                height: 100%;
-                position: absolute;
-                pointer-events: none;
-            }
-
-            &::before {
-                width: 6px;
-                height: 6px;
-                opacity: 0.5;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%) rotate(45deg);
-                content: "";
-                transform-origin: center center 0px;
-                //background: rgb(255, 255, 255);
-                background: rgb(0, 0, 0);
-                transition: opacity 0.2s cubic-bezier(0.41, 0.33, 0, 0.87) 0s;
-            }
-            &.active {
-                &::before {
-                opacity: 1;
-                }
-
-                .svg-circle {
-                -webkit-transform: rotate(-45deg);
-                -ms-transform: rotate(-45deg);
-                transform: rotate(-45deg);
-                }
-                circle {
-                stroke-dashoffset: 0;
-                }
-            }
-
-            &:hover {
-                .svg-circle {
-                -webkit-transform: rotate(-45deg);
-                -ms-transform: rotate(-45deg);
-                transform: rotate(-45deg);
-                }
-
-                circle {
-                stroke-dashoffset: 0;
-                }
-            }
-            }
-
-            circle {
-            fill: transparent;
-            stroke: rgb(12, 12, 12);
-            stroke-width: 1;
-            transition: all 0.5s ease-out 0s;
-            cx: 50%;
-            cy: 50%;
-            r: 45%;
-            stroke-dasharray: 160;
-            stroke-dashoffset: 160;
-            pointer-events: none;
-            }
-
-            .wrap {
-            width: 100vw;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            }
-
-            svg {
-            padding: 20px;
-            }
-
-            #tooltip {
-            padding: 15px;
-            background-color: #eee;
-            color: #9c9c9c;
-            width: 100%;
-            text-align: center;
-            }
-
-            .land {
-            fill: #ccc;
-            fill-opacity: 1;
-            stroke: white;
-            stroke-opacity: 1;
-            stroke-width: 0.5;
-            transition: 0.2s ease-out;
-            }
-
-            .land:hover {
-            fill: #a9a9a9;
-            }
-
-            .tooltip {
-            background-color: #333;
-            color: #fff;
-            padding: 1em;
-            }
+        
+      
         </style>
     </head>
     <body class="d-flex flex-column h-100 bg-light">
@@ -374,95 +161,66 @@
             </div>
 
 
-            <div class="content-width">
-                <div class="slideshow">
-                  <!-- Slideshow Items -->
-                  <div class="slideshow-items">
-                    <div class="item">
-                      <div class="item-image-container">
-                        <figure>
-                          <img class="item-image" src="assets/events/qatar.jpeg" />
-                        </figure>
-                      </div>
-                      <!-- Staggered Header Elements -->
-                      <div class="item-content">
-                        <div class="item-header">
-                          <span class="vertical-part"><b>P</b></span>
-                          <span class="vertical-part"><b>a</b></span>
-                          <span class="vertical-part"><b>r</b></span>
-                          <span class="vertical-part"><b>i</b></span>
-                          <span class="vertical-part"><b>s</b></span>
-                    
-                        </div>
-                        <!-- Staggered Description Elements -->
-                        <div class="item-description">
-                          <span class="vertical-part">
-                            <b>Fictum, deserunt mollit anim laborum astutumque! Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.</b>
-                        </span>
-                        </div>
-                      </div>
+            <div class="blog-home2 py-5">
+                <div class="container">
+                  <!-- Row  -->
+                  <div class="row justify-content-center">
+                    <!-- Column -->
+                    <div class="col-md-8 text-center">
+                        <h3 class="display-5 fw-bolder mb-0"><span style="color: var(--bs-dark-red); class="d-inline"> فعاليات القادمة</span></h3>
                     </div>
-                    <div class="item">
-                      <div class="item-image-container">
-                        <figure>
-                          <img class="item-image" src="assets/events/qatar.jpeg" />
-                        </figure>
-                      </div>
-                      <div class="item-content">
-                        <!-- Staggered Header Elements -->
-                        <div class="item-header">
-                          <span class="vertical-part"><b>Q</b></span>
-                          <span class="vertical-part"><b>a</b></span>
-                          <span class="vertical-part"><b>t</b></span>
-                          <span class="vertical-part"><b>a</b></span>
-                          <span class="vertical-part"><b>r</b></span>                      
-                        </div>
-                        <!-- Staggered Description Elements -->
-                        <div class="item-description">
-                          <span class="vertical-part">
-                          <b>Petierunt uti sibi concilium totius Galliae in diem certam indicere. Vivamus sagittis lacus vel augue laoreet rutrum faucibus. Tu quoque, Brute, fili mi, nihil timor populi, nihil! Morbi odio eros, volutpat ut pharetra vitae, lobortis sed nibh.</b>
-                        </span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="item">
-                      <div class="item-image-container">
-                        <figure>
-                          <img class="item-image" src="assets/events/paris.jpeg" />
-                        </figure>
-                      </div>
-                      <div class="item-content">
-                        <!-- Staggered Header Elements -->
-                        <div class="item-header">
-                          <span class="vertical-part"><b>C</b></span>
-                          <span class="vertical-part"><b>a</b></span>
-                          <span class="vertical-part"><b>i</b></span>
-                          <span class="vertical-part"><b>r</b></span>
-                          <span class="vertical-part"><b>o</b></span>
-                        </div>
-                        <!-- Staggered Description Elements -->
-                        <div class="item-description">
-                          <span class="vertical-part">
-                          <b>Nihil hic munitissimus habendi senatus locus, nihil horum? Hi omnes lingua, institutis, legibus inter se differunt. Gallia est omnis divisa in partes tres, quarum.</b>
-                        </span>
-                        </div>
-                      </div>
-                    </div>
+                    <!-- Column -->
                   </div>
-                  <div class="bullets">
-                    <div class="bullet" data-index="0">
-                      <div><svg class="svg-circle"><circle cx="50%" cy="50%" r="45%" stroke-dasharray="160" stroke-dashoffset="160"></circle></svg></div>
+                  <div class="row mt-4">
+                    <!-- Column -->
+                    <div class="col-md-4 on-hover">
+                        <div class="card border-0 mb-4">
+                            <a href="#"><img class="card-img-top" src="assets/events/20-apr.jpeg" alt="wrappixel kit"></a>
+                            <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">أبريل<span class="d-block">٢٠ </span></div>
+                            <div class="event-location bg-dark-red p-2 d-inline-block text-center rounded text-white position-absolute">باريس</div> <!-- Added class event-location -->
+                        </div>
                     </div>
-                    <div class="bullet" data-index="1">
-                      <div><svg class="svg-circle"><circle cx="50%" cy="50%" r="45%" stroke-dasharray="160" stroke-dashoffset="160"></circle></svg></div>
+                    
+                    
+                    <!-- Column -->
+                    <div class="col-md-4 on-hover">
+                      <div class="card border-0 mb-4">
+                        <a href="#"><img class="card-img-top" src="assets/events/21-apr.jpeg" alt="wrappixel kit"></a>
+                        <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">أبريل<span class="d-block">٢١ </span></div>
+                      </div>
                     </div>
-                    <div class="bullet" data-index="2">
-                      <div><svg class="svg-circle"><circle cx="50%" cy="50%" r="45%" stroke-dasharray="160" stroke-dashoffset="160"></circle></svg></div>
+                    <!-- Column -->
+                    <div class="col-md-4 on-hover">
+                      <div class="card border-0 mb-4">
+                        <a href="#"><img class="card-img-top" src="assets/events/25-apr.jpeg" alt="wrappixel kit"></a>
+                        <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">أبريل<span class="d-block">٢٥</span></div>
+                      </div>
                     </div>
+                    
+                  </div>
+
+                <!-- Second Row -->
+                  <div class="row mt-4">
+                    <!-- Column -->
+                    <div class="col-md-4 on-hover">
+                        <div class="card border-0 mb-4">
+                          <a href="#"><img class="card-img-top" src="assets/events/27-apr.jpeg" alt="wrappixel kit"></a>
+                          <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">أبريل<span class="d-block">٢٧</span></div>
+                        </div>
+                      </div>
+                    
+                    <!-- Column -->
+                    <div class="col-md-4 on-hover">
+                        <div class="card border-0 mb-4">
+                          <a href="#"><img class="card-img-top" src="assets/events/30-apr.jpeg" alt="wrappixel kit"></a>
+                          <div class="date-pos bg-info-gradiant p-2 d-inline-block text-center rounded text-white position-absolute">أبريل<span class="d-block">٣٠</span></div>
+                        </div>
+                      </div>
+                   
                   </div>
                 </div>
               </div>
-
+              
         </main>
         <!-- Footer-->
         <footer class="bg-white py-4 mt-auto">
